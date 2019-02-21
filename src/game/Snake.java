@@ -61,6 +61,10 @@ public class Snake {
 		}
 	}
 	
+	public Direction getHeadDirection() {
+		return head.direction;
+	}
+	
 	public void toLeft() {
 		head.direction = Direction.L;
 	}

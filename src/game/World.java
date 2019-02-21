@@ -28,15 +28,27 @@ public class World extends JPanel {
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
 				case KeyEvent.VK_UP:
+					if (snake.getHeadDirection() == Direction.D) {
+						return ;
+					}
 					snake.toUp();
 					break;
 				case KeyEvent.VK_DOWN:
+					if (snake.getHeadDirection() == Direction.U) {
+						return ;
+					}
 					snake.toDown();
 					break;
 				case KeyEvent.VK_LEFT:
+					if (snake.getHeadDirection() == Direction.R) {
+						return ;
+					}
 					snake.toLeft();
 					break;
 				case KeyEvent.VK_RIGHT:
+					if (snake.getHeadDirection() == Direction.L) {
+						return ;
+					}
 					snake.toRight();
 					break;
 				}
@@ -83,6 +95,7 @@ public class World extends JPanel {
 		frame.setSize(WIDTH, HEIGHT);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setUndecorated(true);
 		World world = new World();
 		frame.add(world);
 		frame.setVisible(true);
