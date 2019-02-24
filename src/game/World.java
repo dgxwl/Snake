@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 public class World extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
-	public static final int COLS = 50;
-	public static final int ROWS = 50;
-	public static final int BLOCK_SIZE = 10;
+	public static final int COLS = 40;
+	public static final int ROWS = 30;
+	public static final int BLOCK_SIZE = 15;
 	public static final int WIDTH = COLS * BLOCK_SIZE;
 	public static final int HEIGHT = ROWS * BLOCK_SIZE;
 	
